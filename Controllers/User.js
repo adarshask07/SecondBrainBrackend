@@ -87,7 +87,7 @@ export const login = async (req, res) => {
 
 export const searchContent = async (req, res) => {
     // const { query } = req.body;/
-    const query = "which is my favourite bike ?" ;
+    const query = "from what i get diseased ?" ;
     const userId = req.user._id ;
   
     try {
