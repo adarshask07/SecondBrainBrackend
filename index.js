@@ -16,7 +16,7 @@ app.use('/auth', UserRoutes) ;
 app.use('/content', ContentRoutes)
 
 app.get("/", (req,res)=>{
-	return res.send("server is up")
+	return res.send("server is up !!!")
 })
 
 // Start the server
