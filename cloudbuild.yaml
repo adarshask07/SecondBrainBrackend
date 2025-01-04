@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/your-project/your-image:latest', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/your-project/your-image:latest']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy',
+         '--image', 'gcr.io/your-project/your-image:latest',
+         '--service', '$SERVICE_NAME', 
+         '--allow-unauthenticated']
