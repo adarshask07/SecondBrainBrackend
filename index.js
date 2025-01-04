@@ -15,12 +15,9 @@ dbConnection();
 app.use('/auth', UserRoutes) ;
 app.use('/content', ContentRoutes)
 
-app.get("/hello", (req,res)=>{
-	return res.json({
-		message : "Hello"
-	})
+app.get("/", (req,res)=>{
+	return res.send("Hello")
 })
-
 
 // Start the server
 app.listen(8080, () => {
